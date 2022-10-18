@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}OnOrg-contact{% endblock title %}
+
+{% block body %}
+<div class="container-fluid">
+    <img src="https://source.unsplash.com/random/1800x600/?order" class="d-block w-100 my-4" alt="...">
+    <h2 class="text-center">May I Help You!</h2>
+</div>
+<form method="post" action="/help">
+    {% csrf_token %}
+<div class="container">
+    <div class=" mb-3">
+        <label for="name" class="form-label">Business Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Type Business Name Here">
+      </div>
+    
+        <div class=" mb-3">
+            <label for="email" class="form-label">email</label>
+            <input type="text" class="form-control" id="email" name="email" placeholder="Type Business email Here">
+          </div>
+        <div class=" mb-3">
+            <label for="phone" class="form-label">Contact No.</label>
+            <input type="text" class="form-control" id="phone" name="phone" placeholder="Type Business Contact No. Here">
+          </div>
+          
+      <div class="mb-3">
+     
+    </div>
+      <div class="mb-3">
+      
+    </div>
+      <div class="mb-3">
+        <label for="desc" class="form-label">Delivery Address</label>
+        <textarea class="form-control" id="desc" name="desc" rows="3"></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit">Large button</button>  
+    </form>
+      
+</div>
+
+{% endblock body %}
